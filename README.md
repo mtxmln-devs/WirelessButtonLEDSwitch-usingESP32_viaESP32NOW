@@ -5,7 +5,6 @@ Control an LED on one ESP32 board by pressing a button on another — wirelessly
 [![Framework](https://img.shields.io/badge/Framework-Arduino-00979D?style=flat&logo=arduino)](https://www.arduino.cc/)
 [![Protocol](https://img.shields.io/badge/Protocol-ESP--NOW-informational?style=flat)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/network/esp_now.html)
 [![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=flat&logo=c%2B%2B)](https://isocpp.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](#license)
 
 ---
 
@@ -243,13 +242,5 @@ And the LED on Board 2 should light up accordingly.
 
 ---
 
-## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
 
----
-
-## 🙋 Author
-
-Built with ❤️ using ESP32 and Arduino.  
-Feel free to fork, modify, and build on this project!
