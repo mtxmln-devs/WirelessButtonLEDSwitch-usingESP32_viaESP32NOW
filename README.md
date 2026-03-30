@@ -37,6 +37,13 @@ When a button is pressed on **Board 1**, it instantly sends a signal to **Board 
 
 ---
 
+---
+
+🛠️ Tech Stack
+ComponentDetailMicrocontrollerESP32 (×2)ProtocolESP-NOW (Espressif peer-to-peer)LanguageC++ (Arduino framework)IDEArduino IDELibrariesesp_now.h, WiFi.h (built-in ESP32 core)Baud Rate115200
+
+---
+
 ## 🛠️ Hardware Required
 
 | Component | Quantity |
