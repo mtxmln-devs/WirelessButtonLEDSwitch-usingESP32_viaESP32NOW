@@ -14,7 +14,6 @@ Control an LED on one ESP32 board by pressing a button on another — wirelessly
 ---
 
 
----
 
 ## 📌 Overview
 
