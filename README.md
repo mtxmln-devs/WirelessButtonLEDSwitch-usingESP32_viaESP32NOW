@@ -37,10 +37,23 @@ When a button is pressed on **Board 1**, it instantly sends a signal to **Board 
 
 ---
 
+
 ---
 
-🛠️ Tech Stack
-ComponentDetailMicrocontrollerESP32 (×2)ProtocolESP-NOW (Espressif peer-to-peer)LanguageC++ (Arduino framework)IDEArduino IDELibrariesesp_now.h, WiFi.h (built-in ESP32 core)Baud Rate115200
+---
+
+## 🛠️ Tech Stack
+
+| Component | Detail |
+|---|---|
+| **Microcontroller** | ESP32 (×2) |
+| **Protocol** | ESP-NOW (Espressif peer-to-peer) |
+| **Language** | C++ (Arduino framework) |
+| **IDE** | Arduino IDE |
+| **Libraries** | `esp_now.h`, `WiFi.h` (built-in ESP32 core) |
+| **Baud Rate** | 115200 |
+
+---
 
 ---
 
@@ -247,6 +260,23 @@ And the LED on Board 2 should light up accordingly.
 | Boards can't find each other | Different Wi-Fi channels | Set both boards to `peerInfo.channel = 0` (auto) |
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
