@@ -52,7 +52,6 @@ When a button is pressed on **Board 1**, it instantly sends a signal to **Board 
 
 ---
 
----
 
 ## 🛠️ Hardware Required
 
