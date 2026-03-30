@@ -18,12 +18,14 @@ When a button is pressed on **Board 1**, it instantly sends a signal to **Board 
 
 ## ✨ Features
 
-- 🔗 **No router needed** — direct peer-to-peer communication
-- ⚡ **Low latency** — near-instant response using ESP-NOW
-- 🔄 **Bidirectional ready** — same code runs on both boards
-- 🛡️ **Debounced input** — 50ms debounce prevents button chatter
-- 📟 **Serial feedback** — logs `PUSH: Sending ON` / `RELEASE: Sending OFF`
-- 🔌 **Simple wiring** — only a button and an LED needed per board
+- 📡 Wireless peer-to-peer communication — no router or internet required
+- ⚡ Real-time response — near-instant LED reaction to button press
+- 🔘 Momentary button support — press to turn ON, release to turn OFF
+- 🛡️ 50ms debounce — prevents false triggers from button chatter
+- 🔁 Two-way compatible — same code runs on both boards (just swap MAC address)
+- 📟 Serial monitor feedback — logs PUSH: Sending ON and RELEASE: Sending OFF
+- 🔒 No encryption overhead — lightweight, fast unencrypted data packets
+- 💡 Simple data structure — single boolean (ledStatus) transmitted per packet
 
 ---
 
@@ -231,16 +233,6 @@ And the LED on Board 2 should light up accordingly.
 
 ---
 
-## 🔧 Possible Improvements
-
-- [ ] Add bidirectional control (button on each board controls the other's LED)
-- [ ] Replace `delay()` debounce with a non-blocking timer
-- [ ] Enable ESP-NOW encryption for secure communication
-- [ ] Add more data fields to the struct (e.g., sensor readings)
-- [ ] Expand to broadcast mode for one-to-many control
-- [ ] Add OLED display to show connection status
-
----
 
 
 
