@@ -80,6 +80,20 @@ When a button is pressed on **Board 1**, it instantly sends a signal to **Board 
 > Both boards use the same pin numbers. The roles are determined by which MAC address is set as the target.
 
 
+---
+
+
+### Pin Reference
+
+| Pin | Board | Component | Mode |
+|---|---|---|---|
+| GPIO 22 | Board 1 | Push Button | `INPUT_PULLUP` |
+| GPIO 23 | Board 2 | LED | `OUTPUT` |
+| GND | Both | Ground | — |
+
+> 💡 `INPUT_PULLUP` means the pin reads **HIGH** when the button is not pressed and **LOW** when pressed. No external pull-up resistor needed.
+
+---
 
 
 
@@ -274,101 +288,11 @@ And the LED on Board 2 should light up accordingly.
 
 
 
-# 📡 ESP32 Wireless Button-LED Control via ESP-NOW
 
-<div align="center">
 
-![Arduino](https://img.shields.io/badge/Arduino-IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-ESP--NOW-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-Arduino-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-![WiFi](https://img.shields.io/badge/Protocol-ESP--NOW-blue?style=for-the-badge)
 
-A wireless peer-to-peer communication system using two **ESP32** boards.  
-Press a button on **Board 1** → LED lights up instantly on **Board 2** — no Wi-Fi router needed! 🚀
 
-[⚡ How It Works](#-how-it-works) · [🔧 Setup](#-setup--installation) · [📌 Wiring](#-wiring-diagram) · [🛠️ Configuration](#️-configuration)
 
-</div>
-
----
-
-## 📖 Project Overview
-
-This project demonstrates **ESP-NOW** — a fast, connectionless wireless protocol by Espressif that allows two ESP32 boards to communicate **directly** with each other without needing a Wi-Fi router or internet connection.
-
-When the **button is pressed** on one board, it instantly sends a signal to the other board, which **turns on its LED**. When the button is **released**, the LED turns off. Communication is real-time with minimal latency.
-
----
-
-## ✨ Features
-
-- 📡 **Wireless peer-to-peer** communication — no router or internet required
-- ⚡ **Real-time response** — near-instant LED reaction to button press
-- 🔘 **Momentary button support** — press to turn ON, release to turn OFF
-- 🛡️ **50ms debounce** — prevents false triggers from button chatter
-- 🔁 **Two-way compatible** — same code runs on both boards (just swap MAC address)
-- 📟 **Serial monitor feedback** — logs `PUSH: Sending ON` and `RELEASE: Sending OFF`
-- 🔒 **No encryption overhead** — lightweight, fast unencrypted data packets
-- 💡 **Simple data structure** — single boolean (`ledStatus`) transmitted per packet
-
----
-
-## 🛠️ Tech Stack
-
-| Component | Detail |
-|---|---|
-| **Microcontroller** | ESP32 (×2) |
-| **Protocol** | ESP-NOW (Espressif peer-to-peer) |
-| **Language** | C++ (Arduino framework) |
-| **IDE** | Arduino IDE |
-| **Libraries** | `esp_now.h`, `WiFi.h` (built-in ESP32 core) |
-| **Baud Rate** | 115200 |
-
----
-
-## 📋 Hardware Requirements
-
-| Component | Quantity |
-|---|---|
-| ESP32 development board | 2 |
-| Push button (momentary) | 1 |
-| LED | 1 |
-| 220Ω resistor (for LED) | 1 |
-| 10kΩ resistor (optional, for button) | 1 |
-| Jumper wires | Several |
-| Breadboard | 1–2 |
-| USB cables | 2 |
-
----
-
-## 📌 Wiring Diagram
-
-### Board 1 — Sender (has the button)
-
-```
-ESP32 Pin 22  ──────────────┬──── Button ──── GND
-                            │
-                        (INPUT_PULLUP — no external resistor needed)
-```
-
-### Board 2 — Receiver (has the LED)
-
-```
-ESP32 Pin 23  ──── 220Ω Resistor ──── LED (+) ──── GND
-```
-
-### Pin Reference
-
-| Pin | Board | Component | Mode |
-|---|---|---|---|
-| GPIO 22 | Board 1 | Push Button | `INPUT_PULLUP` |
-| GPIO 23 | Board 2 | LED | `OUTPUT` |
-| GND | Both | Ground | — |
-
-> 💡 `INPUT_PULLUP` means the pin reads **HIGH** when the button is not pressed and **LOW** when pressed. No external pull-up resistor needed.
-
----
 
 ## 🔧 Setup & Installation
 
