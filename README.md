@@ -312,14 +312,4 @@ WirelessButtonLEDSwitch-usingESP32_viaESP32NOW/
 - [Arduino ESP32 Core](https://github.com/espressif/arduino-esp32)
 - [ESP-NOW Guide — Random Nerd Tutorials](https://randomnerdtutorials.com/esp-now-esp32-arduino-ide/)
 
----
 
-<div align="center">
-
-Built with ❤️ using ESP32 & ESP-NOW
-
-⭐ Star this repo if it helped you!
-
-🐛 Found a bug? [Open an issue!](https://github.com/mtxmln-devs/WirelessButtonLEDSwitch-usingESP32_viaESP32NOW/issues)
-
-</div>
